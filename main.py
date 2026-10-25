@@ -1,7 +1,6 @@
 from fisier import citire_fisier
 
 def citire_tastatura():
-    # Citirea unui sir de numere
     sir = list(map(float, input(
         "Introdu numerele separate prin spatii: "
     ).split()))
