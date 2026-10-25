@@ -1,3 +1,4 @@
+from fisier import citire_fisier
 
 def citire_tastatura():
     # Citirea unui sir de numere
@@ -33,5 +34,18 @@ def citire_tastatura():
         print(" ".join(f"{numar:g}" for numar in rand))
 
 
+
 if __name__ == "__main__":
-    citire_tastatura()
+    print("1. Citire de la tastatura")
+    print("2. Citire din fisier")
+
+    optiune = input("Alege optiunea (1 sau 2): ")
+
+    if optiune == "1":
+        citire_tastatura()
+
+    elif optiune == "2":
+        citire_fisier()
+
+    else:
+        print("Optiune invalida!")
