@@ -1,9 +1,12 @@
+from pathlib import Path
 
 def citire_fisier():
-    nume_fisier = input("Introdu numele fisierului: ")
+    nume_fisier = input("Introdu numele fisierului: ").strip()
+
+    cale_fisier = Path(__file__).resolve().parent / nume_fisier
 
     try:
-        with open(nume_fisier, "r", encoding="utf-8") as f:
+        with open(cale_fisier, "r", encoding="utf-8") as f:
             continut = f.read()
 
         sir = list(map(float, continut.split()))
